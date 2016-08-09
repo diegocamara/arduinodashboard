@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('callsApplication.version.version-directive', [])
+angular.module('arduinoDashBoardApplication.version.version-directive', [])
 
 .directive('appVersion', ['version', function(version) {
   return function(scope, elm, attrs) {

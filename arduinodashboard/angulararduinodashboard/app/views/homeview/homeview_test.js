@@ -1,8 +1,8 @@
 'use strict';
 
-describe('callsApplication.homeview module', function() {
+describe('arduinoDashBoardApplication.homeview module', function() {
 
-  beforeEach(module('callsApplication.homeview'));
+  beforeEach(module('arduinoDashBoardApplication.homeview'));
 
   describe('homeview controller', function(){
 

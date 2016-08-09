@@ -1,7 +1,7 @@
 'use strict';
 
-describe('callsApplication.version module', function() {
-  beforeEach(module('callsApplication.version'));
+describe('arduinoDashBoardApplication.version module', function() {
+  beforeEach(module('arduinoDashBoardApplication.version'));
 
   describe('app-version directive', function() {
     it('should print current version', function() {

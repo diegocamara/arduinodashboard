@@ -1,10 +1,12 @@
 <div flex="30" layout="column" class="boxWithHeight" layout-padding>    
     <section flex>
         <md-content>
+            
             <md-list flex>
-                <md-list-item class="md-3-line" ng-click="null">
-                    <div class="md-list-item-text" layout="column">
-                        <h3>Testing</h3>                    
+                
+                <md-list-item class="md-2-line" ng-click="goTo('homeview.ledsview')">
+                    <div class="md-list-item-text" layout-align="center center" layout="column" flex>                       
+                       <h3>LED</h3>                        
                     </div>
                 </md-list-item>
             </md-list>
@@ -12,6 +14,8 @@
     </section>    
 </div>
 <div flex layout="column" class="boxWithHeight" layout-padding>    
-    <section flex="70"></section>
+    <section flex="70">
+        <div ui-view></div>
+    </section>
     <section flex="30"></section>    
 </div>

@@ -1,7 +1,7 @@
 'use strict';
 
-describe('callsApplication.version module', function() {
-  beforeEach(module('callsApplication.version'));
+describe('arduinoDashBoardApplication.version module', function() {
+  beforeEach(module('arduinoDashBoardApplication.version'));
 
   describe('interpolate filter', function() {
     beforeEach(module(function($provide) {

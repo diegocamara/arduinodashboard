@@ -1,24 +1,22 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('callsApplication', [
-  'ngRoute',
+angular.module('arduinoDashBoardApplication', [
+  'ui.router',
   'ngMaterial',
-  'callsApplication.homeview',
-  'callsApplication.version'
+  'arduinoDashBoardApplication.homeview',
+  'arduinoDashBoardApplication.version'
 ]).
-config(['$locationProvider', '$routeProvider', '$mdDateLocaleProvider', function($locationProvider, $routeProvider, $mdDateLocaleProvider) {
-  $locationProvider.hashPrefix('!');
+config(['$locationProvider', '$urlRouterProvider', '$mdDateLocaleProvider', '$mdThemingProvider',
+         function($locationProvider, $urlRouterProvider, $mdDateLocaleProvider, $mdThemingProvider) {
+   
+   $locationProvider.hashPrefix('!');
 
-  // $mdDateLocaleProvider.parseDate = function(date){
-  //   var moment = moment(date, 'DD-MM-YYYY', true);
-  //   console.log(moment);
-  //   return moment.isValid() ? moment.toDate() : new Date(NaN);
-  // }
+   $mdThemingProvider.theme('default').dark();
 
    $mdDateLocaleProvider.formatDate = function(date) {
     return moment(date).format('DD/MM/YYYY');
   };
 
-  $routeProvider.otherwise({redirectTo: '/homeview'});
+  $urlRouterProvider.otherwise('/homeview');
 }]);

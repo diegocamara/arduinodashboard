@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('callsApplication.version.interpolate-filter', [])
+angular.module('arduinoDashBoardApplication.version.interpolate-filter', [])
 
 .filter('interpolate', ['version', function(version) {
   return function(text) {
