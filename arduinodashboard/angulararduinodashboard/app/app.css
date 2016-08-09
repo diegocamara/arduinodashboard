@@ -1,4 +1,19 @@
-  html, body, div#map {
+  html, body {
    width: 100%;
    height: 100%;
+}
+
+/* Important to set height for column layout */
+.boxWithHeight {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.a, section {
+  border: 5px solid rgba(85, 97, 85, 0.27);
+  margin: 5px;  
+}
+
+section {
+  background-color: #dedede;
 }
