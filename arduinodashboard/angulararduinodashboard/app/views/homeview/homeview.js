@@ -15,11 +15,44 @@ angular.module('arduinoDashBoardApplication.homeview',
 
 }])
 
-.controller('homeviewController', ['$scope', '$state', '$timeout', '$mdSidenav', 
-             function($scope, $state, $timeout, $mdSidenav) {              
+.factory('ComponentsService', function(){
+
+  return {
+
+    getComponents: function(){
+      var components = [
+        {          
+          name: 'LED',
+          state: 'homeview.ledsview',
+          disabled: false
+        }
+      ];
+
+      return components;
+    }
+
+  }
+
+})
+
+.controller('homeviewController', ['$scope', '$state', '$timeout', 'ComponentsService', 
+             function($scope, $state, $timeout, ComponentsService) {              
    
-    $scope.goTo = function(state){
-      $state.go(state);
+    var lastActiveComponent;
+
+    $scope.components = ComponentsService.getComponents();    
+
+
+    $scope.goTo = function(component){
+
+      if(lastActiveComponent){
+        lastActiveComponent.disabled = false;
+      }
+      
+      component.disabled = true;     
+      lastActiveComponent = component;
+
+      $state.go(component.state);
     }
 
 
