@@ -48,8 +48,7 @@ angular.module('arduinoDashBoardApplication.homeview',
 
     var lastActiveComponent;
 
-    $scope.components = ComponentsService.getComponents();    
-
+    $scope.components = ComponentsService.getComponents();
 
     $scope.goTo = function(component){
 
@@ -62,6 +61,5 @@ angular.module('arduinoDashBoardApplication.homeview',
 
       $state.go(component.state);
     }
-
 
 }]);
