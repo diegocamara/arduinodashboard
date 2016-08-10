@@ -8,9 +8,9 @@ angular.module('arduinoDashBoardApplication.homeview',
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   
   $stateProvider.state('homeview', {
-    url: '/homeview',
-    templateUrl: 'views/homeview/homeview.html',
-    controller: 'homeviewController'
+     url: '/homeview',
+     templateUrl: 'views/homeview/homeview.html',
+     controller: 'homeviewController'
   });
 
 }])

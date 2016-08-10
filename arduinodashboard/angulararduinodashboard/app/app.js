@@ -12,7 +12,7 @@ config(['$locationProvider', '$urlRouterProvider', '$mdDateLocaleProvider', '$md
    
    $locationProvider.hashPrefix('!');
 
-   $mdThemingProvider.theme('default').dark();
+  //  $mdThemingProvider.theme('default').dark();
 
    $mdDateLocaleProvider.formatDate = function(date) {
     return moment(date).format('DD/MM/YYYY');

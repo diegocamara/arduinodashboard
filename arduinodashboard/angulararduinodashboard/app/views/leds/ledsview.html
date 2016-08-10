@@ -1,2 +1,6 @@
-LedsView
-<div ui-view></div>
+
+<md-tabs md-border-bottom md-autoselect>
+    <md-tab label="{{tab.name}}" ng-repeat="tab in ledTabs" ng-click="goTo(tab)">
+        <div ui-view="{{tab.viewName}}"></div>
+    </md-tab>    
+</md-tabs>
