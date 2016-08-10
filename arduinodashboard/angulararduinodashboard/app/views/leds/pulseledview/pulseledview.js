@@ -19,7 +19,7 @@ $stateProvider.state('homeview.ledsview.pulseledsview', {
 }])
 
 .controller('pulseLedViewController', ['$scope', '$timeout', 
-             function($scope, $timeout) {              
-     
+             function($scope, $timeout) {  
+    
 
 }]);

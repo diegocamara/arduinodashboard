@@ -21,5 +21,6 @@ $stateProvider.state('homeview.ledsview.blinkledsview', {
 .controller('blinkLedViewController', ['$scope', '$timeout', 
              function($scope, $timeout) {              
      
+     
 
 }]);
