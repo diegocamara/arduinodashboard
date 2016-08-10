@@ -35,9 +35,17 @@ angular.module('arduinoDashBoardApplication.homeview',
 
 })
 
-.controller('homeviewController', ['$scope', '$state', '$timeout', 'ComponentsService', 
-             function($scope, $state, $timeout, ComponentsService) {              
+.controller('homeviewController', ['$scope', '$state', '$timeout', '$sce', 'ComponentsService', 
+             function($scope, $state, $timeout, $sce, ComponentsService) {              
    
+    $scope.fiveOptions = {
+      initFive: false,
+      state: function(){
+        var outputHtml = this.initFive ? "<b style='color:green;'>ON</b>" : "<b style='color:red;'>OFF</b>";
+        return $sce.trustAsHtml(outputHtml);
+      }
+    };
+
     var lastActiveComponent;
 
     $scope.components = ComponentsService.getComponents();    
