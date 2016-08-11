@@ -1,0 +1,37 @@
+<style>
+.led-panel {
+    width: 400px;
+    height: 400px;
+}
+.led-panel-actions{
+    padding: 0px;
+}
+</style>
+<md-dialog aria-label="led dialog">
+   <md-toolbar>
+       <div class="md-toolbar-tools">
+        <h2>New Led</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="closeDialog()">
+          <md-icon md-svg-src="icons/ic_close_white_24px.svg" aria-label="Close led dialog"></md-icon>
+        </md-button>
+      </div>
+   </md-toolbar>
+   <md-dialog-content class="led-panel">
+       <md-content layout-padding>
+           <div flex layout="row">
+               <md-input-container>
+                <label>Pin:</label>
+                <md-select ng-model="led.pin">
+                    <md-option ng-repeat="pin in pins" ng-value="{{pin}}">{{pin}}</md-option>
+                </md-select>
+               </md-input-container>
+            </div>
+       </md-content>
+     
+   </md-dialog-content>
+   <md-dialog-actions class="led-panel-actions" layout-align="center center">       
+        <md-button ng-click="closeDialog()"  aria-label="label">Cancel</md-button>
+        <md-button ng-click="confirmLed()"  aria-label="label">Confirm</md-button>           
+   </md-dialog-actions>
+</md-dialog>

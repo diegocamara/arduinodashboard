@@ -29,6 +29,17 @@ angular.module('arduinoDashBoardApplication.homeview',
       ];
 
       return components;
+    }, 
+
+    getBorderDigitalPins: function(){
+      var pins = [];
+
+      for(var pin = 1; pin <= 13; pin++){
+        pins.push(pin);
+      }
+
+      return pins;
+
     }
 
   }
