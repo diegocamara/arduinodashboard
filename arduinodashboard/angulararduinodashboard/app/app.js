@@ -16,7 +16,7 @@ config(['$locationProvider', '$urlRouterProvider', '$mdDateLocaleProvider', '$md
 
    $mdDateLocaleProvider.formatDate = function(date) {
     return moment(date).format('DD/MM/YYYY');
-  };
+  };  
 
   $urlRouterProvider.otherwise('/homeview');
 }]);

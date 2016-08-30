@@ -8,6 +8,7 @@
   "main": "app/index.html",
   "window": {
     "toolbar": true,
+    "frame": false,
     "width": 1024,
     "height": 768
   },
