@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "root",
+    "password": "1234567",
+    "dialect": "sqlite",
+    "host": "localhost",    
+    "database": "/developmentdb.sqlite",
+    "pool": {"max": 5, "min": 0, "idle": 10000}    
+  },
+  "test":{
+    "username": "root",
+    "password": "1234567",
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production":{
+    "username": "root",
+    "password": "1234567",
+    "database": "productiondb",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}

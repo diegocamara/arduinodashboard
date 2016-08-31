@@ -49,6 +49,8 @@ angular.module('arduinoDashBoardApplication.homeview',
 .controller('homeviewController', ['$scope', '$state', '$timeout', '$sce', 'ComponentsService', 
              function($scope, $state, $timeout, $sce, ComponentsService) {              
    
+    var models = require('./models');
+
     $scope.fiveOptions = {
       initFive: false,
       state: function(){
