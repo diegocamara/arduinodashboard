@@ -51,6 +51,16 @@ angular.module('arduinoDashBoardApplication.homeview',
    
     var models = require('./models');
 
+   
+
+    models.sequelize.sync().then(function(){
+
+      models.User.findAll().then(function(users){
+
+      });      
+      
+    });
+
     $scope.fiveOptions = {
       initFive: false,
       state: function(){
