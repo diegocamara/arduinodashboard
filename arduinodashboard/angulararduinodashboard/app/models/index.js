@@ -11,7 +11,7 @@ var sequelize = new Sequelize(config.database, config.username, config.password,
 
 var db = {};
 
-loader(__dirname, function(file){
+loader(__dirname, function(file){  
   var model = sequelize.import(path.join(__dirname, file));
   db[model.modelName] = model;
 });
