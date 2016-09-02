@@ -46,20 +46,28 @@ angular.module('arduinoDashBoardApplication.homeview',
 
 })
 
-.controller('homeviewController', ['$scope', '$state', '$timeout', '$sce', 'ComponentsService', 
-             function($scope, $state, $timeout, $sce, ComponentsService) {              
+.controller('homeviewController', ['$scope', '$state', '$timeout', '$sce', 'ComponentsService', 'dbService', 'modelsService',
+             function($scope, $state, $timeout, $sce, ComponentsService, dbService, modelsService) {              
+               
    
-    var models = require('./models');
+    var db = dbService.getDb();
 
-   
-
-    models.sequelize.sync().then(function(){
-
-      models.User.findAll().then(function(users){
-
-      });      
+    db.serialize(function(){
       
+      var stmt = db.prepare('INSERT INTO User (Name) VALUES (?)');
+
+      stmt.run(['User 4']);
+
+      stmt.finalize();
+
+      db.each('SELECT * FROM User', function(error, row){
+        console.log(row);
+      });      
+
     });
+
+    db.close();
+    
 
     $scope.fiveOptions = {
       initFive: false,
